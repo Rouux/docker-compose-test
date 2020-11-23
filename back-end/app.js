@@ -14,8 +14,7 @@ app.use(cookieParser());
 app.use((req, _, next) => {
   req.headers.authorization = "authorized";
   console.log(`Going to : ${req.url}`);
-  console.log(`headers : ${JSON.stringify(req.headers)}`);
-  console.log(`headers auth : ${req.headers.authorization}`);
+  console.log(`headers.authorization : ${req.headers.authorization}`);
   next();
 });
 
