@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd /back-end
-npm run dev
+DEBUG=back-end:* npm run start:dev

@@ -1,35 +1,20 @@
 version: "3.8"
 
 services:
-  docker-test-back:
+  back-end:
     build: ./back-end
-    image: 'docker-test-back:latest'
-    container_name: 'back-end'
-    user: "${DUID}:${DGID}"
+    container_name: back-end
     ports:
-        - "3000:3000"
+      - 3000:3000
     volumes:
-        - './back-end:/back-end'
-    deploy:
-        resources:
-            limits:
-                cpus: '1'
-                memory: '2000M'
+      - ./back-end:/back-end
 
-  docker-test-front:
+  front-end:
     build: ./front-end
-    image: docker-test-front:latest
     container_name: front-end
-    user: ${DUID}:${DGID}
+    depends_on: 
+      - back-end
     ports:
       - 4200:4200
     volumes:
       - ./front-end:/front-end
-    deploy:
-      resources:
-        limits:
-          cpus: 1
-
-volumes:
-  back-end:
-  front-end:
