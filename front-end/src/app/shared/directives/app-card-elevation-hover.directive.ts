@@ -27,7 +27,6 @@ export class CardElevationHoverDirective {
 
   @HostListener('mouseenter')
   onMouseEnter() {
-    console.log('mouseenter ?');
     this.setElevation(this.raisedElevation);
   }
 
