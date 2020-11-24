@@ -1,10 +1,15 @@
-<mat-toolbar>
-  <span> Test </span>
-  <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<mat-toolbar [color]="'primary'">
+  <span> Welcome ! </span>
 </mat-toolbar>
 
-<div class="row">
-  <div *ngFor="let animal of animals">
+<div
+  class="flex-row"
+  cdkDropList
+  cdkDropListOrientation="horizontal"
+  (cdkDropListDropped)="drop($event)"
+>
+  <div *ngFor="let animal of animals" cdkDrag>
+    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
     <app-card
       [title]="animal.name"
       [image]="animal.image"

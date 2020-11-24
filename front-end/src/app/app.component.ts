@@ -1,3 +1,4 @@
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 import {
   Animal,
@@ -18,5 +19,9 @@ export class AppComponent implements OnInit {
     this._animalRestService
       .getAnimals()
       .subscribe((animals) => (this.animals = animals));
+  }
+
+  drop(event: CdkDragDrop<Animal[]>) {
+    moveItemInArray(this.animals, event.previousIndex, event.currentIndex);
   }
 }

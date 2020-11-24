@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd /front-end
-npm start || {
+npm docker:start || {
     npm install
-    npm start
+    npm docker:start
 }

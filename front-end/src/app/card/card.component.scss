@@ -5,6 +5,10 @@
 .example-card {
   max-width: 400px;
   margin: 5px;
+
+  .card-img {
+    max-height: 400px;
+  }
 }
 
 .example-header-image {

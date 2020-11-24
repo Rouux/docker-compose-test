@@ -11,6 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   exports: [
@@ -26,6 +27,7 @@ import { MatCardModule } from '@angular/material/card';
     MatBadgeModule,
     MatListModule,
     MatCardModule,
+    DragDropModule,
   ],
 })
 export class MaterialModule {}
