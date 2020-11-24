@@ -12,6 +12,16 @@ const animals = [
 		image: "https://thecatandthedog.com/wp-content/uploads/2020/11/GettyImages-1199242002-1-scaled-1.jpg",
 		description: "Small young cat",
 	},
+	{
+		name: "Sam",
+		image: "https://media.ooreka.fr/public/image/3-306495-2497-full-13056057.jpg",
+		description: "Big cloudy dog",
+	},
+	{
+		name: "Max",
+		image: "https://i.pinimg.com/originals/60/66/a6/6066a6fc7b8069b90ccfb44ee011d239.jpg",
+		description: "Small young dog",
+	},
 ];
 
 router.use((req, res, next) => {
